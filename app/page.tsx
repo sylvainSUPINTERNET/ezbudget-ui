@@ -1,4 +1,4 @@
-import { Link } from "./components/Link";
+import { LinkLogin } from "./components/LinkLogin";
 import { cookies } from 'next/headers';
 
 export default async function Home() {
@@ -7,9 +7,12 @@ export default async function Home() {
   const cookieStore = await cookies();
   console.log("???",cookieStore.get('access_token_link')?.value);
 
+  let data = await fetch('https://api.vercel.app/blog')
+  let posts = await data.json()
+
   return (
     <div className="">
-      <Link></Link>
+      <LinkLogin data={posts}></LinkLogin>
     </div>
   );
 }

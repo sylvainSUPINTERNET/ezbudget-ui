@@ -12,7 +12,8 @@
     "next": "15.0.2",
     "plaid": "^29.0.0",
     "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028"
+    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "react-plaid-link": "^3.6.1"
   },
   "devDependencies": {
     "@types/node": "^20",
