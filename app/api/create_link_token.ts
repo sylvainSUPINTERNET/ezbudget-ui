@@ -16,7 +16,8 @@ const plaidClient = new PlaidApi(configuration);
 
 export default function handler(req:NextApiRequest, res: NextApiResponse) {
     if ( req.method === "POST" ) {
-        
+        // TODO : pass accesstoken from Link
+        //plaidClient.itemPublicTokenExchange()
         res.status(200).json({ name: 'John Doe' })
     } else {
         res.status(405).json({});
