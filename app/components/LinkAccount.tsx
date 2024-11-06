@@ -6,7 +6,7 @@ export const LinkAccount = (props: {linkToken:string}) => {
     
     const onSuccess = useCallback((public_token:string, metadata:any) => {
 
-        console.log("Public token to send to back todo");
+        console.log("Public token to send to back todo", public_token);
         // TODO send public_token to server 
         /*
         const response = fetch('/api/set_access_token', {

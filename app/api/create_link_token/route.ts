@@ -43,7 +43,7 @@ export async function GET( req: NextRequest ) {
             client_user_id: `${uuidv4()}`,
             },
             client_name: 'EzBudget',
-            products: [Products.Auth], // For some reason, Products.Auth is required to get the link token ( if we add more stuff, it will cause 400 )
+            products: [Products.Auth, Products.Transactions], // Sandbox limitation can't test other products
             country_codes: [CountryCode.Fr, CountryCode.Gb, CountryCode.Us, CountryCode.Ca],
             redirect_uri: `${process.env.PLAID_REDIRECT_URI}`,
             // webhook: // TODO later : si besoin de raw pour le webhook ( comme Stripe webhook ) 
