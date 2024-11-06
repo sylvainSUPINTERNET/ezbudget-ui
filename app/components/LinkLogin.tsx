@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 export const LinkLogin = ({data}: {data:any}) => {
+
     useEffect(() => {
         console.log("LinkLogin");
     },[]);
